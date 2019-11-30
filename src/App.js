@@ -23,8 +23,10 @@ class App extends React.Component {
     render() {
         const {monsters, searchField} = this.state;
         const filteredMonsters = monsters.filter(m => m.name.toLowerCase().includes(searchField.toLowerCase()));
+
         return (
             <div className='App'>
+                <h1>Monster Rolodex</h1>
                 <SearchBox
                     placeholder='search monsters'
                     handleChange={this.handleChange}
